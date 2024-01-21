@@ -54,7 +54,7 @@ const ProfileNoUser = () => {
     <div className='flex flex-col items-center flex-1 justify-center'>
       <h1>Авторизация</h1>
       <TelegramLoginButton
-        botName={process.env.NEXT_PUBLIC_APP_NAME}
+        botName={process.env.NEXT_PUBLIC_AUTH_BOT_NAME}
         // @ts-ignore
         dataOnauth={handleTelegram}
       />

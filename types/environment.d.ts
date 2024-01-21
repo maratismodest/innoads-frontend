@@ -9,6 +9,7 @@ declare global {
       NEXT_PUBLIC_ADMIN: string;
       NEXT_PUBLIC_PASSWORD: string;
       NEXT_PUBLIC_APP_NAME: string;
+      NEXT_PUBLIC_AUTH_BOT_NAME:string;
     }
   }
 }
