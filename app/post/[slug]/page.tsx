@@ -16,6 +16,8 @@ type AdPageProps = {
   };
 };
 
+export const revalidate = 60;
+
 export async function generateMetadata({
   params: { slug },
 }: AdPageProps): Promise<Metadata | null> {

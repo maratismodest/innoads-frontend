@@ -3,7 +3,7 @@ import InfinitePosts from '@/modules/InfinitePosts';
 import fetchAds from '@/utils/api/fetchAds';
 import fetchCategories from '@/utils/api/fetchCategories';
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export default async function Home() {
   const { content: posts, totalPages } = await fetchAds({

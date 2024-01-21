@@ -21,10 +21,13 @@ export const metadata: Metadata = {
   title: seo.default.title,
   description: seo.default.description,
   authors: [{ name: 'InnoAds' }],
-  publisher: 'InnoAds',
-  keywords: 'innoads, Иннополис, доска объявлений',
+  publisher: 'FireEquipment',
+  keywords: 'fire, пожарная барахолка, экипировка',
   manifest: '/manifest.json',
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
+  openGraph: {
+    images: ['/images/fire-equipment.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

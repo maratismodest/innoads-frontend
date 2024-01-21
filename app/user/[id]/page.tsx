@@ -10,19 +10,17 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
 
-export const revalidate = 86400;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const users = await fetchUsers();
 
-  return users.map((user) => ({
+  return users.map(user => ({
     id: user.id.toString(),
   }));
 }
 
-export async function generateMetadata({
-                                         params: { id },
-                                       }: GetIdPath): Promise<Metadata | null> {
+export async function generateMetadata({ params: { id } }: GetIdPath): Promise<Metadata | null> {
   const user = await fetchUser(id);
   if (!user) {
     return null;
@@ -39,15 +37,18 @@ export default async function PublicProfile<NextPage>({ params: { id } }: GetIdP
     return notFound();
   }
   const { content: posts } = await fetchPosts({
-    size: 10, userId: id,
+    size: 10,
+    userId: id,
   });
 
   return (
     <>
       <h1>Профиль пользователя</h1>
-      <p>Количество объявлений: <span>{posts.length}</span></p>
-      <Posts posts={posts} className='mt-10' />
-      <Link href={tgLink + '/' + user.username} passHref className='mt-10 block'>
+      <p>
+        Количество объявлений: <span>{posts.length}</span>
+      </p>
+      <Posts posts={posts} className="mt-10" />
+      <Link href={tgLink + '/' + user.username} passHref className="mt-10 block">
         <Button>Написать пользователю</Button>
       </Link>
     </>
