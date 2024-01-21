@@ -20,8 +20,8 @@ export default function Header() {
       <nav className="mx-auto flex w-full max-w-[1100px] justify-between p-3">
         <Link href={routes.main} className="flex items-center gap-2 text-[#ce2029]">
           <span className="text-2xl">01</span>
-          <span className="hidden lg:inline">|</span>
-          <span className="hidden uppercase lg:inline">Пожарная барахолка</span>
+          <span className="lg:inline">|</span>
+          <span className="uppercase lg:inline">Пожарная барахолка</span>
         </Link>
         <div ref={ref} className="lg:hidden">
           <Button onClick={openDropdown}>&#8801;</Button>

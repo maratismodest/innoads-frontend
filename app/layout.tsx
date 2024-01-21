@@ -20,8 +20,8 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: seo.default.title,
   description: seo.default.description,
-  authors: [{ name: 'InnoAds' }],
-  publisher: 'FireEquipment',
+  authors: [{ name: process.env.NEXT_PUBLIC_APP_NAME }],
+  publisher: process.env.NEXT_PUBLIC_APP_NAME,
   keywords: 'fire, пожарная барахолка, экипировка',
   manifest: '/manifest.json',
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),

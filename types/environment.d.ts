@@ -7,7 +7,8 @@ declare global {
       NEXT_PUBLIC_APP_URL: string;
       NEXT_PUBLIC_NODE_ENV: string;
       NEXT_PUBLIC_ADMIN: string;
-      NEXT_PUBLIC_PASSWORD:string;
+      NEXT_PUBLIC_PASSWORD: string;
+      NEXT_PUBLIC_APP_NAME: string;
     }
   }
 }
