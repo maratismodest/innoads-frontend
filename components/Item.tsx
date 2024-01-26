@@ -193,5 +193,5 @@ const errors = {
 enum ItemModalText {
   edit = 'Редактировать объявление?',
   delete = 'Удалить объявление?',
-  telegram = 'Опубликовать в канале InnoAds?',
+  telegram = 'Опубликовать в канале?',
 }

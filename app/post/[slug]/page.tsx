@@ -30,7 +30,7 @@ export async function generateMetadata({
   const { categoryId, title, body, preview, user } = post;
   const category = categories.find(option => option.value === categoryId) || categories[0];
   return {
-    title: `${category.label} ${title.slice(0, 50)} в городе Иннополис`,
+    title: `${category.label} ${title.slice(0, 50)}`,
     description: body.slice(0, 320),
     authors: [{ name: user.username, url: `${tgLink}/${user.username}` }],
     alternates: {

@@ -28,6 +28,8 @@ export async function generateMetadata({
   };
 }
 
+export const revalidate = 86400;
+
 export default async function Article<NextPage>({ params: { slug } }: GetSlugPath) {
   const article = await fetchArticle(slug);
   if (!article) {

@@ -164,7 +164,7 @@ export default function PostPage<NextPage>({ post, related, categories }: Props)
           className="mt-8"
           onClick={async () =>
             await navigator.share({
-              title: 'InnoAds',
+              title: 'Fire Equipment',
               text: 'Поделиться ссылкой:',
               url: process.env.NEXT_PUBLIC_APP_URL + '/post/' + slug,
             })

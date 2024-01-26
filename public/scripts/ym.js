@@ -12,7 +12,7 @@
 })
 (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
-ym(88487475, 'init', {
+ym(96257429, 'init', {
     clickmap: true,
     trackLinks: true,
     accurateTrackBounce: true
