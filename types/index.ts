@@ -4,6 +4,7 @@ export type ArticleDTO = {
   readonly slug: string;
   readonly body: string;
   readonly createdAt: string;
+  readonly updatedAt: string;
 };
 
 export interface Seo {
@@ -43,6 +44,7 @@ export interface UserDTO {
   readonly id: number;
   readonly username: string;
   readonly createdAt?: string;
+  readonly userAd?: any[];
 }
 
 export interface PostDTO {

@@ -10,8 +10,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
 
-export const revalidate = 60;
-
 export async function generateStaticParams() {
   const users = await fetchUsers();
 
@@ -28,8 +26,14 @@ export async function generateMetadata({ params: { id } }: GetIdPath): Promise<M
   return {
     title: `Пользователь ${user.username}`,
     description: `Пользователь ${user.id}`,
+    // robots: {
+    //   index: false,
+    //   follow: true,
+    // },
   };
 }
+
+export const revalidate = 86400;
 
 export default async function PublicProfile<NextPage>({ params: { id } }: GetIdPath) {
   const user = await fetchUser(id);
@@ -37,7 +41,6 @@ export default async function PublicProfile<NextPage>({ params: { id } }: GetIdP
     return notFound();
   }
   const { content: posts } = await fetchPosts({
-    size: 100,
     userId: id,
   });
 
