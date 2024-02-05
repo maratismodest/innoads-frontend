@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: process.env.NEXT_PUBLIC_APP_URL,
-    images: ['/images/og-image.png'],
+    images: ['/images/og-image.jpg'],
     title: seo.default.title,
     description: seo.default.description,
     locale: 'ru',
