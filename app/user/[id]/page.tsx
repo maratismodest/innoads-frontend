@@ -42,6 +42,7 @@ export default async function PublicProfile<NextPage>({ params: { id } }: GetIdP
   }
   const { content: posts } = await fetchPosts({
     userId: id,
+    size: 50
   });
 
   return (
